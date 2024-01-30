@@ -50,6 +50,16 @@ answers: list = []
 
 @trackingStatusQuestion(question=question, answers=answers)
 def writeMessage(message, user_id):
+    """Короче, пытался настроить нормально декоратор, но нифига не получилось. Какая была моя идея:
+    def wrtieMessage(message,user_id,question,answers):
+        @trackingStatusQuestion(question=question, answers=answers,message=message,user_id,user_id)
+        def wm():
+            ...
+    То есть функция writeMessage будет принимать уже 4 аргумента, после чео все это идет в декоратор
+    Но возникла проблема
+    Функция wm должна принимать по любому какие-то параметры, чтобы отправить сообщение
+    Но как она будет принимать аргументы, если она уже записана в другую функцию?((("""
+
     vk.method("messages.send", {
         "user_id": user_id,
         "message": message,

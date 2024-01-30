@@ -2,8 +2,6 @@ import vk_api
 from vk_api.longpoll import VkLongPoll, VkEventType
 from vk_api.utils import get_random_id
 
-token = "vk1.a.37ibOrx473bf_-I-FmFpB-o455I-gXn-s6B4m6eMfd-qgLsPeXRZOH7q-l4kPDJ3RivHDu4gKe75OVLaeGX5aVPrWiyBJb4lTLr3xOwWo1-fnH12ybk85xb6IEBLxwszSfjnuzGQ1_V32BkqDc6x6CEL4TL56Oekik6SsSbv7LGzAO5F6hu1MYqKoJA-VgWbXPaZfXyaxwt2aXycg21FQg"
-
 vk = vk_api.VkApi(token=token)
 longpoll = VkLongPoll(vk)
 
